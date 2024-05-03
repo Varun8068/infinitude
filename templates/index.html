@@ -1,48 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styled Input Fields</title>
-    <style>
-        /* Style for all input elements */
-        input {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 2px solid red;
-            border-radius: 4px;
-            background-color: #3CBC8D;
-            color: white;
-            outline: none; /* Remove blue outline on focus */
-        }
-
-        /* Style for specific input types */
-        input[type=text] {
-            /* Additional styling for text fields */
-            background-image: url('searchicon.png');
-            background-position: 10px 10px;
-            background-repeat: no-repeat;
-            padding-left: 40px;
-            transition: width 0.4s ease-in-out; /* Animate width on focus */
-        }
-
-        /* Style for focused input fields */
-        input[type=text]:focus {
-            background-color: lightblue;
-            border: 3px solid #555;
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
-    <form>
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name">
-
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name">
+<html>
+  <head>
+    <title>Simple Web App</title>
+  </head>
+  <body>
+    <h1>Submit Your Information</h1>
+    <form action="/submit" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <button type="submit">Submit</button>
     </form>
-</body>
+  </body>
 </html>
